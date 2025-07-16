@@ -1,0 +1,31 @@
+export const API = {
+  geocoding: 'https://geocoding-api.open-meteo.com/v1/search',
+  weather: 'https://api.open-meteo.com/v1/forecast',
+} as const;
+
+export const weatherCodes: Record<number, { condition: string; description: string; icon: string }> = {
+  0: { condition: 'Clear', description: 'Clear sky', icon: '01d' },
+  1: { condition: 'Clear', description: 'Mainly clear', icon: '01d' },
+  2: { condition: 'Clouds', description: 'Partly cloudy', icon: '02d' },
+  3: { condition: 'Clouds', description: 'Overcast', icon: '04d' },
+  45: { condition: 'Fog', description: 'Foggy', icon: '50d' },
+  48: { condition: 'Fog', description: 'Depositing rime fog', icon: '50d' },
+  51: { condition: 'Rain', description: 'Light drizzle', icon: '09d' },
+  53: { condition: 'Rain', description: 'Moderate drizzle', icon: '09d' },
+  55: { condition: 'Rain', description: 'Dense drizzle', icon: '09d' },
+  61: { condition: 'Rain', description: 'Slight rain', icon: '10d' },
+  63: { condition: 'Rain', description: 'Moderate rain', icon: '10d' },
+  65: { condition: 'Rain', description: 'Heavy rain', icon: '10d' },
+  71: { condition: 'Snow', description: 'Slight snow fall', icon: '13d' },
+  73: { condition: 'Snow', description: 'Moderate snow fall', icon: '13d' },
+  75: { condition: 'Snow', description: 'Heavy snow fall', icon: '13d' },
+  77: { condition: 'Snow', description: 'Snow grains', icon: '13d' },
+  80: { condition: 'Rain', description: 'Slight rain showers', icon: '09d' },
+  81: { condition: 'Rain', description: 'Moderate rain showers', icon: '09d' },
+  82: { condition: 'Rain', description: 'Violent rain showers', icon: '09d' },
+  85: { condition: 'Snow', description: 'Slight snow showers', icon: '13d' },
+  86: { condition: 'Snow', description: 'Heavy snow showers', icon: '13d' },
+  95: { condition: 'Thunderstorm', description: 'Thunderstorm', icon: '11d' },
+  96: { condition: 'Thunderstorm', description: 'Thunderstorm with slight hail', icon: '11d' },
+  99: { condition: 'Thunderstorm', description: 'Thunderstorm with heavy hail', icon: '11d' },
+};
